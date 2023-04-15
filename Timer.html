@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Object</h1>
+<h2>The setInterval() and clearInterval() Methods</h2>
+
+<p id="demo"></p>
+<h1 id="stopTimer">time started</h1>
+
+<button onclick="myStop()">Stop the time</button>
+
+<script>
+const myInterval = setInterval(myTimer, 1000);
+
+function myTimer() {
+  const date = new Date();
+  document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+}
+
+function myStop() {
+    clearInterval(myInterval);
+    document.getElementById("stopTimer").innerHTML="Time Stoped"
+}
+</script>
+
+</body>
+</html>
